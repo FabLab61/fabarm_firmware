@@ -76,8 +76,8 @@ void setup()
   angle1 = angleMiddle1;
   angle2 = angleMiddle2;
   angle3 = angleMiddle3;
-} 
- 
+}
+
 void loop() 
 {
   int potvalue;
@@ -95,7 +95,6 @@ void loop()
     angle0 = constrain(angle0, angleMin0, angleMax0);
   }
   servo0.write(angle0);
-  Serial.println(potvalue);
 
   potvalue = analogRead(potpin1);
   dpotvalue = potvalue1 - potvalue;
@@ -108,7 +107,6 @@ void loop()
     angle1 = constrain(angle1, angleMin1, angleMax1);
   }
   servo1.write(angle1);
-  Serial.println(potvalue);
 
   potvalue = analogRead(potpin2);
   dpotvalue = potvalue2 - potvalue;
